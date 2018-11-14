@@ -1,0 +1,136 @@
+body{
+	background-color: rgba(238, 242, 245,1);
+}
+.navbar{
+	background-color: rgba(1, 194, 110,1);
+	/*background-color: rgba(226, 76, 63,1);*/
+	padding: 0;
+	border-color:rgba(1, 194, 110,1);
+	border-radius: 0;
+	border:;
+	top: 0;
+	z-index: 9999;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,.4);
+}
+.top-navbar ul li.item-nav a{
+	color:rgba(255,255,255,1);
+	font-weight: bolder;
+}
+	.top-navbar ul li.item-nav a:hover{
+		color:rgba(255,255,255,.8);
+	}
+.navbar-right li a span,
+.navbar-header a span, b{
+	color:rgba(255,255,255,1);
+}
+.navbar-brand img{
+	height: 25px;
+}
+.profile-image{
+		margin:9px 0 0 0;
+		padding-left: 40px;
+		/*position: relative;*/
+}
+.profile-image a > img{
+	/*border:2px solid rgba(214, 73, 55,1);*/
+	border-radius: 12%;
+	height:35px;
+	width:35px;
+	/*position: relative;*/
+	/*float:left;*/
+}
+	.profile-image a{
+		position: relative;
+		text-decoration: none;
+		/*margin:200px;*/
+		/*padding-top: 200px;*/
+	}
+	.profile-image a > span{
+		text-decoration: none;
+		color: rgba(0,0,0,1);
+		font-weight: bolder;
+		padding-left:10px;
+	}
+
+
+
+.sidebar{
+	position: fixed;
+	top:0;
+	left: 0;
+	width:20%;
+	height: 100%;
+	z-index: 997;
+	padding-top:60px;
+	/*font-size: 200px;*/
+	color:rgba(255,255,255,1);
+	background-color: rgba(30, 35, 39,1);
+	/*overflow: scroll;*/
+	overflow-x: hidden;
+	overflow-y: auto;
+	/*marquee-style:scroll;*/
+}
+.sidebar-profile{
+	padding-left:10px;
+	padding-bottom: 20px;
+	padding-top:10px;
+	border-bottom:1px solid rgba(16, 20, 25,.8);
+}
+.sidebar-profile .media-left img{
+	border-radius:12%;
+	height:70px;
+	width:70px;
+	/*background-color: rgba(255,255,255);*/
+	border:2px solid rgba(214, 73, 55,1);
+	/*border-radius: 50%;*/
+}
+	
+	.sidebar-info-jurusan{
+		color:rgba(255,255,255,.5);
+		font-weight: bolder;
+		font-size: 12px;
+	}
+	.sidebar-info-nama{
+		font-weight: ;
+		font-size:20px;
+		/*color:rgba(255,255,255,.5);*/
+	}
+	.dashboard-layout{
+	padding-left:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color: rgba(16, 20, 25,.4);
+	border-bottom:1px solid rgba(16, 20, 25,1);
+	font-weight: bolder;
+}	
+	
+	.nav li.dashboard-layout a:hover{
+		background-color: transparent;
+	}
+	
+	.dash-gly,
+	.dashboard-layout-text {
+		color:rgba(1, 194, 110,1);	
+	}
+.sidebar-nav{
+	margin:0px 0px 0 0px;
+
+}
+	.sidebar-nav li a{
+		padding-left:25px;
+		text-transform: uppercase;
+		font-weight: ;
+	}
+
+.nav-stacked-items{
+	background-color: rgba(16, 20, 25,1);
+}
+.nav-stacked-items li a{
+	padding-left:35px;
+}
+.nav-stacked li a{
+	color:rgba(255,255,255,1);
+}
+.nav-stacked li a > span.glyphicon{
+	padding-right:10px;
+}

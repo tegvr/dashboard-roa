@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+	<!-- CHART.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+	<!-- <script src="js/Chart.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" integrity="sha384-Nud2SriDt2fZ+u85IBC48Yn9p+l4AGlapnX1EGA2KrnZjYJx8sxKnw/CIxc1wU1B" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-8+rznmq/k0KZkJlZhnuPEVkbRD7tA0wcFEjY48dajGWn3Xc1MasJwS8/tJ7OEsKW" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/custom_style_1.css">
+	<link rel="stylesheet" href="css/custom_style_2.css">
+	
+</head>
+<body>
+<section class="sidebar">
+	<div class="sidebar-profile media">
+		<div class="media-left">
+			<img src="images/user2.png"/>
+		</div>
+		<div class="media-body">
+			<span class="sidebar-info-jurusan">
+			Teknologi Informasi '14
+			</span> <br>
+			<span class="sidebar-info-nama">
+			Tegar Nuansa
+			</span>
+		</div>
+	</div>
+
+	<ul class="nav nav-stacked sidebar-nav" role="tablist" id="accordion">
+		<li class="dashboard-layout">
+		<a href="<?=base_url('user_management/index')?>">
+			<span class="glyphicon dash-gly glyphicon-th-large"></span>
+			<span class="dashboard-layout-text">
+			Dashboard
+			</span>
+			</a>
+		</li>
+		
+		<li class="">
+			<a href="<?=base_url('user_management/profile')?>">
+			<span class="glyphicon glyphicon-user"></span>
+			Profile
+			</a>
+		</li>
+		
+		<li><a href="<?=base_url('user_management/tasks')?>"><span class="glyphicon glyphicon-list-alt"></span>Tasks</a></li>
+		
+		<li><a href="<?=base_url('user_management/schedule')?>"><span class="glyphicon glyphicon-signal"></span>Schedule</a></li>
+		
+		<li class="dropdown">
+			<a href="#collapse1" role="button" data-toggle="collapse" data-parent="accordion" aria-expanded="true" aria-multiselectable="true">
+			<span class="glyphicon glyphicon-time"></span>
+			Statistic
+			<span class="caret"></span>
+			</a>
+				<ul id="collapse1" class="nav nav-stacked nav-stacked-items collapse dropdown" role="tablist" id="accordion">
+					<li class=""><a href="<?=base_url('user_management/statistic/ujian')?>"><span class="glyphicon glyphicon-apple"></span>Ujian</a>
+					</li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Kuis</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Tugas</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Pertemuan</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Feedback Praktikan</a></li>
+					
+				</ul>
+		</li>
+
+		<li><a href="<?=base_url('user_management/pengumuman')?>"><span class="glyphicon glyphicon-check"></span>Pengumuman</a></li>
+	</ul>		
+</section>
+
+<section class="dashboard-sect">
+	<div class="container">
+		<div class="row">
+		  <div class="col-md-4">
+		    <div class="title-ds">
+		    <h3>DASHBOARD</h3>
+		    <span>Pratikum Pemrograman Internet</span>
+		    </div>
+		  </div>
+		  <div class="col-md-8">
+		      <div class="keterangan-ds">
+		        <ul>
+		          <li>
+		            <h4>3</h4><span>Kelas</span>
+		          </li>
+		          <li>
+		            <h4>51</h4><span>mahasiswa</span>
+		          </li>
+		          <li>
+		            <h4>24</h4><span>pertemuan</span>
+		          </li>
+		        </ul>
+		      </div>
+		  </div>
+		</div>
+	</div>
+</section>
+
+<section class="section-um">
+	<div class="container">
+	<div class="row section-um-content">
+		<div class="col-md-9">
+		    <div class="canvas1">
+		        <canvas id="myChart"></canvas>
+		  	</div>
+		</div>
+		<div class="col-md-3">
+		    <div class="linec-desc-list">
+			    <ul>
+			      <li class="line-title">Rata-rata Nilai</li>
+			      <li class="line-angka">80.5</li>
+			      <div></div>
+			      <li class="line-title">Kehadiran</li>
+			      <li class="line-angka">80%</li>
+			      <div></div>
+			      <li class="line-title">Pertemuan</li>
+			      <li class="line-angka">75%</li>
+			    </ul>
+		    </div>
+		</div>
+	</div>
+<div class="row small-box-chart">
+  <div class="col-md-4 ">
+    <div class="item-box">
+      <div class="item-box-title">
+      <div class="glyphicon glyphicon-info-sign info-ibt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></div>
+      <div class="dropdown dropmenu dropdown-menu info-title-box">
+      Rata-rata kehadiran mahasiswa semua kelas
+      </div>
+      <span class="title-ibt">
+      Kehadiran
+      </span>
+
+      </div>
+      <canvas id="kehadiran-chart" height="250px"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="item-box">
+      <div class="item-box-title">
+      <div class="glyphicon glyphicon-info-sign info-ibt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></div>
+      <div class="dropdown dropmenu dropdown-menu info-title-box">
+      Jumlah pertemuan total ke semua kelas
+      </div>
+      <span class="title-ibt">
+      Pertemuan
+      </span>
+      </div>
+      <canvas id="pertemuan-chart" height="250px"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="item-box">
+    <div class="glyphicon glyphicon-info-sign info-ibt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></div>
+      <div class="dropdown dropmenu dropdown-menu info-title-box">
+      Rata-rata nilai semua kelas
+      </div>
+      <div class="item-box-title text-center">
+       Nilai Kuis Terakhir      
+      </div>
+      <canvas id="nilai-kuis" height="250px"></canvas>
+    </div>
+  </div>
+</div>
+
+
+<div class="row small-box-chart">
+  <div class="col-md-8 ">
+    <div class="item-box-1">
+      <div class="item-box-title text-center">
+        FeedBack      
+      </div>
+
+      <canvas id="feedback" height="350px" width="500px"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="item-box">
+      <div class="item-box-title text-center">
+       Nilai perkelas      
+      </div>
+      <canvas id="rata_kuis" height="250px"></canvas>
+    </div>
+  </div>
+</div>
+	</div> <!-- container closed -->
+</section>
+</body>
+<script src="js/script.js"></script>
+</html>
