@@ -351,3 +351,67 @@ border-radius: 0px;
 	top:5px;
 	font-weight: bolder;
 }
+
+
+/*goto styling open*/
+/* STYLE 2 */
+.btn-collapse{
+  position: fixed;
+  padding:0;
+  margin:0;
+  bottom:35px;
+  background: #24292E;
+  border:0px;
+  box-shadow: 1px 5px 5px 6px rgba(0,0,0,.2);
+  z-index: 9999;
+  left:50px;
+  margin: 10px;
+  line-height: 1em !important;
+  transition: 0.25s ease;
+  border-radius: 30px;
+}
+.btn-collapse i{
+  color:white;
+  font-size: 39px;
+  padding:0;
+  margin:0;
+}
+.hidden-text{
+  position: absolute;
+  top: -5px;
+  text-transform: uppercase;
+  font-weight:bolder;
+/*   bottom: 0px; */
+  left: 45px;
+  color:white;
+  opacity: 0;
+  font-size: 14px !important;
+  line-height: 3.75em !important;
+  margin: auto;
+  transition: opacity 0.25s;
+}
+	.hidden-text i.fas{
+		position: relative;
+		font-size: 13px;
+		bottom:1px;
+	}
+.btn-collapse:hover {
+  width: 180px;
+  background: #24292E;;
+  border:0px;
+  border-radius: 30px;
+  text-align: left;
+}
+.btn-collapse:hover i {
+  height: 20px;
+  width: 60px;
+  padding: 0;
+}
+.btn-collapse:hover .hidden-text {
+  font-size: 20px;
+  opacity: 1;
+  line-height: 3.75em;
+  right: 30px;
+  color:white;
+}
+/*goto styling close*/
