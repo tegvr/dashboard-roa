@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<!-- CHART.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+	<!-- <script src="js/Chart.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" integrity="sha384-Nud2SriDt2fZ+u85IBC48Yn9p+l4AGlapnX1EGA2KrnZjYJx8sxKnw/CIxc1wU1B" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-8+rznmq/k0KZkJlZhnuPEVkbRD7tA0wcFEjY48dajGWn3Xc1MasJwS8/tJ7OEsKW" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/custom_style_1.css">
+	<link rel="stylesheet" href="css/custom_style_2.css">
+	<link href="jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="jqvmap/jquery.vmap.js"></script>
+    <script type="text/javascript" src="jqvmap/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery('#vmap').vectorMap({ map: 'world_en' });
+    });
+    </script>
+	
+</head>
+<body>
+<section class="sidebar">
+	<div class="sidebar-profile media">
+		<div class="media-left">
+			<img src="images/user2.png"/>
+		</div>
+		<div class="media-body">
+			<span class="sidebar-info-jurusan">
+			Deputi Kemanan Siber dan Sandi
+			</span> <br>
+			<span class="sidebar-info-nama">
+			D32
+			</span>
+		</div>
+	</div>
+
+	<ul class="nav nav-stacked sidebar-nav" role="tablist" id="accordion">
+		<li class="dashboard-layout">
+		<a href="">
+			<span class="glyphicon dash-gly glyphicon-th-large"></span>
+			<span class="dashboard-layout-text">
+			Dashboard
+			</span>
+			</a>
+		</li>
+		
+		<li class="">
+			<a href="">
+			<span class="glyphicon glyphicon-user"></span>
+			Profile
+			</a>
+		</li>
+		
+		<li><a href=""><span class="glyphicon glyphicon-list-alt"></span>Tasks</a></li>
+		
+		<li><a href=""><span class="glyphicon glyphicon-signal"></span>Schedule</a></li>
+		
+		<li class="dropdown">
+			<a href="#collapse1" role="button" data-toggle="collapse" data-parent="accordion" aria-expanded="true" aria-multiselectable="true">
+			<span class="glyphicon glyphicon-time"></span>
+			Statistic
+			<span class="caret"></span>
+			</a>
+				<ul id="collapse1" class="nav nav-stacked nav-stacked-items collapse dropdown" role="tablist" id="accordion">
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Ujian</a>
+					</li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Kuis</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Tugas</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Pertemuan</a></li>
+					<li class=""><a href=""><span class="glyphicon glyphicon-apple"></span>Feedback Praktikan</a></li>
+					
+				</ul>
+		</li>
+
+		<li><a href=""><span class="glyphicon glyphicon-check"></span>Pengumuman</a></li>
+	</ul>		
+</section>
+
+<section class="dashboard-sect">
+	<div class="container">
+		<div class="row">
+		  <div class="col-md-4">
+		    <div class="title-ds">
+		    <h3>Data Statistic</h3>
+		    <span>Computer Security Incident Response Team</span>
+		    </div>
+		  </div>
+		  <div class="col-md-8">
+		      <div class="keterangan-ds">
+		        <ul>
+		          <li>
+		            <h4>32</h4><span>CSIRT</span>
+		          </li>
+		          <li>
+		            <h4>51</h4><span>IKAMI</span>
+		          </li>
+		          <li>
+		            <h4>24</h4><span>PERSANDIAN</span>
+		          </li>
+		        </ul>
+		      </div>
+		  </div>
+		</div>
+	</div>
+</section>
+
+<section class="section-um">
+<div class="container">
+	<div class="col-md-4">
+		<div class="canvas1">
+			<div id="vmap" style="width: 600px; height: 400px;"></div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+</body>
+<script src="js/script.js"></script>
+</html>
